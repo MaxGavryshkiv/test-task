@@ -25,13 +25,21 @@ function searchBook(e) {
 
 function renderBooks(books) {
   const bookArr = books
-    .map(
-      (book) =>
-        `<li class='book-search-result-card'>
-        <img class='book-search-result-img' src='${book.volumeInfo.imageLinks.thumbnail}' alt="${book.volumeInfo.title}">
+    .map((book) => {
+      let src;
+
+      try {
+        console.log("succes");
+        src = `${book.volumeInfo.imageLinks.thumbnail}`;
+      } catch {
+        src = "./Pictures/not-found.png";
+      }
+
+      return `<li class='book-search-result-card'>
+        <img class='book-search-result-img' src=${src} alt="${book.volumeInfo.title}">
         <h3>${book.volumeInfo.title}</h3>
-        </li>`
-    )
+        </li>`;
+    })
     .join("");
 
   bookSearchResult.innerHTML = `<ul class='book-search-result-list'>${bookArr}</ul>`;
