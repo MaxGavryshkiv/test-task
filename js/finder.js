@@ -12,7 +12,7 @@ bookSearchInput.addEventListener("input", searchBook);
 
 function searchBook(e) {
   clearTimeout(timer);
-  const inputValue = event.target.value;
+  const inputValue = event.target.value.toLowerCase();
   if (e.target.value.length <= 3) {
     return;
   }
