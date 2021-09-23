@@ -18,7 +18,9 @@ function togglePopUp() {
 
 function popUpUninstall() {
   togglePopUp();
-  alert("DONE");
+  setTimeout(() => {
+    alert("DONE");
+  }, 200);
 }
 
 function onBackDropClick(event) {
