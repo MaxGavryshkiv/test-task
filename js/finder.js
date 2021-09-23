@@ -33,7 +33,7 @@ function renderBooks(books) {
         </li>`
     )
     .join("");
-  console.log(bookArr);
+
   bookSearchResult.innerHTML = `<ul class='book-search-result-list'>${bookArr}</ul>`;
 }
 
