@@ -29,7 +29,6 @@ function renderBooks(books) {
       let src;
 
       try {
-        console.log("succes");
         src = `${book.volumeInfo.imageLinks.thumbnail}`;
       } catch {
         src = "./Pictures/not-found.png";
