@@ -1,0 +1,122 @@
+.PopUp_content {
+  width: 550px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  padding: 10px;
+  transition: all 0.5s;
+}
+.PopUp_backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  overflow: scroll;
+  z-index: 5;
+}
+
+.PopUp_is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: 300ms linear 0.2s;
+}
+
+.PopUp_is-hidden .PopUp_content {
+  top: -100%;
+  transform: translateX(-50%) scale(0.1);
+}
+
+.PopUp_content-bg {
+  background-color: #ffffff;
+  border-radius: 2%;
+}
+
+.PopUp_header {
+  margin: 20px 70px;
+  text-align: center;
+}
+
+.PopUp_close-bttn {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+
+  &-icon {
+    width: 100%;
+    height: 100%;
+    fill: #8b93a3;
+  }
+
+  &:hover &-icon,
+  &:focus &-icon {
+    fill: #000000;
+  }
+}
+
+.PopUp_warning-box {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+
+  &-icon {
+    fill: #ff3b30;
+  }
+}
+
+.PopUp_nav-bttn {
+  display: flex;
+  justify-content: center;
+}
+
+.bttn {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 40px;
+  margin: 0 15px 15px 0;
+  outline: none;
+  border-radius: 3px;
+  height: 32px;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #dbe7f2;
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+.PopUp_nav-bttn-cancel {
+  border: 1px solid #8b93a3;
+  color: #7d818a;
+  background-color: #ffffff;
+}
+
+.PopUp_nav-bttn-uninstall {
+  border: none;
+  color: #ffffff;
+  background-color: #ff3b30;
+}
+
+.PopUp_open-bttn {
+  border: 1px solid #8b93a3;
+  color: #7d818a;
+  background-color: #ffffff;
+}
