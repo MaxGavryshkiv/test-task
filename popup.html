@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тестове завдання 1</title>
+
+    <link rel="stylesheet" href="./css/popup.min.css" />
+  </head>
+
+  <body>
+    <ul>
+      <li><a href="./index.html">Назад</a></li>
+    </ul>
+
+    <button type="button" class="PopUp_open-bttn bttn">Pop Up</button>
+
+    <!-- Pop Up -->
+
+    <div class="PopUp_backdrop PopUp_is-hidden" data-popup>
+      <div class="PopUp_content PopUp_content-bg">
+        <button class="PopUp_close-bttn">
+          <svg class="PopUp_close-bttn-icon">
+            <use href="./Pictures/sprite.svg#icon-popup-close"></use>
+          </svg>
+        </button>
+
+        <div class="PopUp_warning-box">
+          <svg class="PopUp_warning-box-icon">
+            <use href="./Pictures/sprite.svg#icon-warning_notify-red"></use>
+          </svg>
+        </div>
+
+        <h2 class="PopUp_header">
+          Are you sure want to uninstall the Shazam app
+        </h2>
+
+        <div class="PopUp_nav-bttn">
+          <button class="PopUp_nav-bttn-cancel bttn">Cancel</button>
+          <button class="PopUp_nav-bttn-uninstall bttn">Uninstall</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/popup.js" type="module"></script>
+  </body>
+</html>
